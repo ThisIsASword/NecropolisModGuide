@@ -1,0 +1,41 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #d3d3d3;
+  /* background-color: black; */
+  font-family: monospace;
+}
+
+.w-90 {
+  width: 90%;
+  padding: 2px 5px;
+  margin: auto;
+  /* border-radius: 5px; */
+}
+
+.step {
+  background-color: #64caef;
+  background-color: #3ed7e8;
+  color: black;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+header {
+  /* background-color: #bc2416; */
+  background-color: black;
+  color: #bc2416;
+  text-align: center;
+}
+.header-div {
+  /* background-color: black; */
+  /* border-radius: 5px; */
+  font-size: 20px;
+}
+
+
+section {
+  background-color: black;
+  color: white;
+}
