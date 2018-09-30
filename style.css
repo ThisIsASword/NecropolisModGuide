@@ -1,9 +1,13 @@
+/*
+  Necro Blue:     #3dd7e8;
+  Necro RedBlack: #282020;
+*/
+
 body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #d3d3d3;
-  /* background-color: black; */
+  background-color: #282020;
   font-family: monospace;
 }
 
@@ -15,17 +19,20 @@ body {
 }
 
 .step {
-  background-color: #64caef;
-  background-color: #3ed7e8;
+  background-color: #3dd7e8;
   color: black;
   border-radius: 5px;
   padding: 0 5px;
 }
 
+.note {
+  font-size: 12px;
+  padding: 0;
+  /* margin: 0; */
+}
+
 header {
-  /* background-color: #bc2416; */
-  background-color: black;
-  color: #bc2416;
+  color: #c41c0d;
   text-align: center;
 }
 .header-div {
@@ -34,8 +41,16 @@ header {
   font-size: 20px;
 }
 
-
 section {
-  background-color: black;
+  font-size: 18px;
   color: white;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  color: #3dd7e8;
+  text-align: center;
 }
