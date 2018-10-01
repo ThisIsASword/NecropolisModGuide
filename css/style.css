@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto+Condensed');
+.heading-font {
+  font-family: 'Luckiest Guy', cursive;
+}
+.instruction-font {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #282020;
+  font-family: monospace;
+}
+.w-90 {
+  width: 90%;
+  padding: 2px 5px;
+  margin: auto;
+  /* border-radius: 5px; */
+}
+.step-card {
+  background-color: #3dd7e8;
+  color: black;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 600px) {
+  .step-card {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .step-card {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .step-card {
+    font-size: 36px;
+  }
+}
+.note {
+  font-size: 18px;
+  padding: 3px;
+  background-color: #1ac5d8;
+  border-radius: 3px;
+}
+header {
+  color: #c41c0d;
+  text-align: center;
+  font-family: 'Luckiest Guy', cursive;
+}
+header .header-div {
+  /* background-color: black; */
+  /* border-radius: 5px; */
+  font-size: 20px;
+}
+.heading {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #98eaf3;
+  padding: 5px;
+  border-radius: 5px;
+}
+.step-list {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.step-list li {
+  margin-bottom: 5px;
+}
+.img-wrapper {
+  max-width: 1000;
+}
+.img-wrapper:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.img-wrapper img {
+  width: 100%;
+}
+footer {
+  color: #3dd7e8;
+  text-align: center;
+}
+a {
+  color: #c41c0d;
+  font-weight: bold;
+}

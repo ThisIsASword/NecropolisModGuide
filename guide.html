@@ -2,46 +2,56 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
+  <title>The Necro Mod Guide</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="w-90">
-    <div class="header-div">
-      <h1>The Necropolis Mod Guide for the Unwashed and Ill-informed</h1>
-    </div>
+    <h1 class="big-heading">The Necropolis Mod Guide for the Unwashed and Ill-informed</h1>
   </header>
 
   <section class="w-90">
-
-    <div class="step">
-      <h2>Step 1: Install Partiality</h2>
+    <div class="step-card">
+      <h2 class="heading">Step 1: Install Partiality</h2>
       <p class="note">Steps by Zandra with some minor modifications.</p>
-      <ol>
+      <ol class="step-list">
         <li>Download <a href="https://github.com/PartialityModding/PartialityLauncher/releases">Partiality</a>
-          <img src="images/" alt="Screenshot of Partiality Releases Page">
+          <div class="img-wrapper">
+            <img src="images/PartialityReleases.png" alt="Screenshot of Partiality Releases Page">
+          </div>
+          <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
         </li>
         <li>Extract the .zip file anywhere you want.</li>
         <li>Run "Partiality Launcher.bat"</li>
         <li>Press "File" at the top, then "Open Game"</li>
-        <li>Find your game's .exe and select it</li>
+        <li>Find your game's .exe and select it
+          <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
+          <p class="note">Mac: ???</p>
+          <p class="note">Linux: ??????</p>
+          <p class="note">Toaster: I hope so.</p>
+        </li>
         <li>Once you have it selected, press "Patch Game" at the bottom.</li>
         <li>It will patch the game and create folders for you</li>
-        <li>Navigate to the game's folder</li>
-        <li>Put mods in the "Mods" folder</li>
-        <li>Re-Launch partiality, and enable/disable mods as you need. Press "Patch Game" whenever you're ready, and press "Yes" when it asks you to launch the game.</li>
       </ol>
     </div>
 
-    <div class="step">
-      <h2>Step 2: Install Abraxis Toolset</h2>
-      <ol>
+    <div class="step-card">
+      <h2 class="heading">Step 2: Install Abraxis Toolset</h2>
+      <ol class="step-list">
         <li>Download <a href="https://github.com/Cut2TheChase/AbraxisToolset/releases">Abraxis Toolset</a>
-          <img src="images/" alt="Screenshot of Abraxis Toolset Releases Page">
+          <div class="img-wrapper">
+            <img src="images/AbraxisReleases.png" alt="Screenshot of Abraxis Toolset Releases Page">
+          </div>
         </li>
         <li>Extract the .rar file anywhere you want.
           <p class="note">(Look at that README.txt file existing, literally insisting that you read it. It will tell you to...)</p>
+        </li>
+        <li>Locate the game's folder
+          <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
+          <p class="note">Mac: ???</p>
+          <p class="note">Linux: ??????</p>
+          <p class="note">Refrigerator: Running?</p>
         </li>
         <li>Place AbraxisToolset.dll into Necropolis/Mods</li>
         <li>Place discord-rpc.dll into Necropolis/Plugins</li>
@@ -49,16 +59,26 @@
       </ol>
     </div>
 
-    <div class="step">
-      <h2>Step 3: Adding Mods</h2>
-      <ol>
-        <li>Download the mods you want to install. For this example, we'll use <a href="https://github.com/Cut2TheChase/ZekesNewThrowables/releases">Zeke's New Throwables</a>.
+    <div class="step-card">
+      <h2 class="heading">Step 3: Adding Mods</h2>
+      <ol class="step-list">
+        <li>Download the mods you want to install.
+          <p>Several mods can be found on <a href="https://www.nexusmods.com/necropolis">NexusMods</a></p>
+          <p>
+            For this example, we'll use <a href="https://github.com/Cut2TheChase/ZekesNewThrowables/releases">Zeke's New Throwables</a>.
+            It's sourced from GitHub but the steps are the same after downloading the .zip or .rar file.
+          </p>
           <p class="note">Downloads should be from the mod's "releases" page if they're from Github otherwise you're probably getting the wrong files.</p>
-          <img src="" alt="Zeke's New Throwables Releases Page Screenshot">
+          <div class="img-wrapper">
+            <img src="images/ZNTReleases.png" alt="Zeke's New Throwables Releases Page Screenshot">
+          </div>
+          <p class="">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
         </li>
         <li>Extract the .zip or .rar file anywhere you want.
           <p class="note">(Preferably somewhere you can find it later)</p>
-          <img src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
+          <div class="img-wrapper">
+            <img src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
+          </div>
         </li>
         <li>Place folders containing the CSV files into Necropolis/Mods
           <p class="note">Unless the mod's instructions specify otherwise.</p>
@@ -67,7 +87,9 @@
           <p class="note">Unless the mod's instructions specify otherwise.</p>
         </li>
         <li>At the end of this process, your mods folder should look something like this:
-          <img src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
+          <div class="img-wrapper">
+            <img src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
+          </div>
         </li>
         <li>In Partiality, refresh the mod list, then select the mods you want to patch in, and patch the game.
           <p class="note">For simplicity, assume that ALL mods require Abraxis Toolset to be patched in.</p>
@@ -77,11 +99,15 @@
       </ol>
     </div>
 
-    <div class="step">
-      <h2>Step 4: Fixing problems</h2>
-      <p>If there's an infinite load screen: verify integrity of local files through steam. Patch the game with only Abraxis checked. Then patch the game with your mods of choice.</p>
+    <div class="step-card">
+      <h2 class="heading">Step 4: Fixing problems</h2>
+      <ul class="step-list">
+        <li>If there's an infinite load screen: verify integrity of local files through steam. Patch the game with only Abraxis checked. Then patch the game with your mods of choice.</li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
-    <!-- <div class="step">
+    <!-- <div class="step-card">
     <h2>Step x</h2>
     <p></p>
   </div> -->
@@ -91,6 +117,6 @@
 <footer class="w-90">
   <p>Congratulations. Things should work now. Pat yourself on the back because you can follow directions.</p>
 </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
