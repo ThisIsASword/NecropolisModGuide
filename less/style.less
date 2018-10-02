@@ -1,21 +1,19 @@
-// out: ../css/style.css
+// out: ../css/style.css, compress: true
 
-@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto+Condensed');
+@import "colors.less";
+@import "responsive-text.less";
+@import "lightbox.less";
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto+Slab|Open+Sans');
 
-@necro-blue:  #3dd7e8;
-@necro-red:   #c41c0d;
-@necro-grey:  #282020;
-
-@font-size-lg: 36px;
-@font-size-md: 24px;
-@font-size-sm: 18px;
-@font-size-xsm: 12px;
-
-.heading-font {
+.display-font {
   font-family: 'Luckiest Guy', cursive;
+  // font-family: 'Roboto Slab', sans-serif;
 }
-.instruction-font {
-  font-family: 'Roboto Condensed', sans-serif;
+.necro-font {
+  font-family: 'Roboto Slab', sans-serif;
+}
+.basic-font{
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -23,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: @necro-grey;
-  font-family: monospace;
+  // font-family: monospace;
 }
 
 .w-90 {
@@ -33,73 +31,86 @@ body {
   /* border-radius: 5px; */
 }
 
-.step-card {
-  background-color: @necro-blue;
-  color: black;
-  border-radius: 5px;
-  padding: 0 5px;
-
-  @media screen and (max-width: 600px) {
-    font-size: @font-size-sm;
-  }
-  @media screen and (min-width: 900px) {
-    font-size: @font-size-md;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: @font-size-lg;
-  }
-}
-
-.note {
-  font-size: @font-size-sm;
-  padding: 3px;
-  background-color: darken(@necro-blue, 10%);
-  border-radius: 3px;
-}
-
-header {
+header .big-heading {
   color: @necro-red;
   text-align: center;
-
-  .heading-font;
-  .header-div {
-    /* background-color: black; */
-    /* border-radius: 5px; */
-    font-size: 20px;
-  }
-}
-
-// section {
-//   font-size: 18px;
-//   color: white;
-// }
-.heading {
-  .heading-font;
-  background-color: lighten(@necro-blue, 20%);
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.step-list {
-  .instruction-font;
-  li {
-    margin-bottom: 5px;
-  }
-}
-.img-wrapper {
-  max-width: 1000;
-  &:hover {
-    cursor: pointer;
-    opacity: 0.8
-  }
-  img {
-    width: 100%;
-  }
+  .display-font;
+  .heading-font-scale-3xl;
+  font-weight: bold;
 }
 
 footer {
   color: @necro-blue;
   text-align: center;
+  .necro-font;
+}
+
+.step-card {
+  background-color: @necro-blue;
+  color: @necro-black;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.heading {
+  .display-font;
+  .heading-font-scale-lg;
+  background-color: lighten(@necro-blue, 20%);
+  box-shadow: 0px 2px 3px #2d6e53;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.step-list {
+  .necro-font;
+  h3 {
+    // font-weight: bold;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  width: 350px;
+  background-color: @necro-grey;
+  border: solid @necro-grey 3px;
+
+  .image-tooltip {
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: fadeout(@necro-red, 10%);
+    color: white;
+    font-size: @font-size-sm;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .image-tooltip {
+      visibility: visible;
+    }
+  }
+  img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
+
+.note {
+  .basic-font;
+  font-size: @font-size-sm;
+  padding: 3px;
+  background-color: darken(@necro-blue, 10%);
+  border-radius: 3px;
 }
 
 a {

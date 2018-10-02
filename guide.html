@@ -7,6 +7,13 @@
 </head>
 <body>
 
+  <div id="modal-lightbox">
+    <div class="close-button">Close</div>
+    <div class="img-container">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+  </div>
+
   <header class="w-90">
     <h1 class="big-heading">The Necropolis Mod Guide for the Unwashed and Ill-informed</h1>
   </header>
@@ -14,55 +21,73 @@
   <section class="w-90">
     <div class="step-card">
       <h2 class="heading">Step 1: Install Partiality</h2>
-      <p class="note">Steps by Zandra with some minor modifications.</p>
+      <p class="note">Steps by <a href="https://github.com/ZandrXandr?tab=repositories">Zandra</a> with some minor modifications.</p>
       <ol class="step-list">
-        <li>Download <a href="https://github.com/PartialityModding/PartialityLauncher/releases">Partiality</a>
+        <li><h3>Download <a href="https://github.com/PartialityModding/PartialityLauncher/releases">Partiality</a></h3>
           <div class="img-wrapper">
-            <img src="images/PartialityReleases.png" alt="Screenshot of Partiality Releases Page">
+            <img class="screenshot"src="images/PartialityReleases.png" alt="Screenshot of Partiality Releases Page">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
           </div>
           <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
         </li>
-        <li>Extract the .zip file anywhere you want.</li>
-        <li>Run "Partiality Launcher.bat"</li>
-        <li>Press "File" at the top, then "Open Game"</li>
-        <li>Find your game's .exe and select it
+        <li><h3>Extract the .zip file anywhere you want.</h3></li>
+        <li><h3>Run "Partiality Launcher.bat"</h3></li>
+        <li><h3>Press "File" at the top, then "Open Game"</h3>
+          <div class="img-wrapper">
+            <img class="screenshot"src="images/PartialityInterface.png" alt="Screenshot of Abraxis Toolset Releases Page">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
+          </div>
+        </li>
+        <li><h3>Find your game's .exe and select it</h3>
           <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
           <p class="note">Mac: ???</p>
           <p class="note">Linux: ??????</p>
           <p class="note">Toaster: I hope so.</p>
         </li>
-        <li>Once you have it selected, press "Patch Game" at the bottom.</li>
-        <li>It will patch the game and create folders for you</li>
+        <li><h3>Once you have it selected, press "Apply Mods" at the bottom.</h3></li>
+        <li><h3>It will patch the game and create folders for you</h3></li>
+        <li><h3>Place the <code><a href="appid.txt">appid.txt</a></code> file in the <code>Necropolis</code> folder.</h3>
+          <p>The file is included in this guide.</p>
+        </li>
       </ol>
     </div>
 
     <div class="step-card">
       <h2 class="heading">Step 2: Install Abraxis Toolset</h2>
       <ol class="step-list">
-        <li>Download <a href="https://github.com/Cut2TheChase/AbraxisToolset/releases">Abraxis Toolset</a>
+        <li><h3>Download <a href="https://github.com/Cut2TheChase/AbraxisToolset/releases">Abraxis Toolset</a></h3>
           <div class="img-wrapper">
-            <img src="images/AbraxisReleases.png" alt="Screenshot of Abraxis Toolset Releases Page">
+            <img class="screenshot"src="images/AbraxisReleases.png" alt="Screenshot of Abraxis Toolset Releases Page">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
           </div>
         </li>
-        <li>Extract the .rar file anywhere you want.
+        <li><h3>Extract the .rar file anywhere you want.</h3>
           <p class="note">(Look at that README.txt file existing, literally insisting that you read it. It will tell you to...)</p>
         </li>
-        <li>Locate the game's folder
-          <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
-          <p class="note">Mac: ???</p>
-          <p class="note">Linux: ??????</p>
-          <p class="note">Refrigerator: Running?</p>
+        <li><h3>Locate the game's folder</h3>
+          <p class="note">Windows: usually <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis</code></p>
+          <p class="note">Mac: <code>???</code></p>
+          <p class="note">Linux: <code>??????</code></p>
+          <p class="note">Refrigerator: <code>Running?</code></p>
         </li>
-        <li>Place AbraxisToolset.dll into Necropolis/Mods</li>
-        <li>Place discord-rpc.dll into Necropolis/Plugins</li>
-        <li>In Partiality, click refresh, then click the Abraxis Toolset checkbox, then click "patch game"</li>
+        <li><h3>Place Abraxis Toolset files in necessary locations</h3>
+          <p>Place AbraxisToolset.dll into <code>Necropolis/Mods</code></p>
+          <p>Place discord-rpc.dll into <code>Necropolis/Plugins</code></p>
+        </li>
+        <li><h3>In Partiality, click refresh, then click the Abraxis Toolset checkbox, then click "Apply Mods"</h3></li>
       </ol>
     </div>
 
     <div class="step-card">
       <h2 class="heading">Step 3: Adding Mods</h2>
       <ol class="step-list">
-        <li>Download the mods you want to install.
+        <li><h3>Download the mods you want to install.</h3>
           <p>Several mods can be found on <a href="https://www.nexusmods.com/necropolis">NexusMods</a></p>
           <p>
             For this example, we'll use <a href="https://github.com/Cut2TheChase/ZekesNewThrowables/releases">Zeke's New Throwables</a>.
@@ -70,28 +95,38 @@
           </p>
           <p class="note">Downloads should be from the mod's "releases" page if they're from Github otherwise you're probably getting the wrong files.</p>
           <div class="img-wrapper">
-            <img src="images/ZNTReleases.png" alt="Zeke's New Throwables Releases Page Screenshot">
+            <img class="screenshot"src="images/ZNTReleases.png" alt="Zeke's New Throwables Releases Page Screenshot">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
           </div>
           <p class="">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
         </li>
-        <li>Extract the .zip or .rar file anywhere you want.
+        <li><h3>Extract the .zip or .rar file anywhere you want.</h3>
           <p class="note">(Preferably somewhere you can find it later)</p>
           <div class="img-wrapper">
-            <img src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
+            <img class="screenshot"src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
           </div>
         </li>
-        <li>Place folders containing the CSV files into Necropolis/Mods
+        <li><h3>Place folders containing the CSV files into <code>Necropolis/Mods</code></h3>
           <p class="note">Unless the mod's instructions specify otherwise.</p>
         </li>
-        <li>Place .dlls into Necropolis/Mods
+        <li><h3>Place .dlls into <code>Necropolis/Mods</code></h3>
           <p class="note">Unless the mod's instructions specify otherwise.</p>
         </li>
-        <li>At the end of this process, your mods folder should look something like this:
+        <li><h3>At the end of this process, your mods folder should look something like this:</h3>
           <div class="img-wrapper">
-            <img src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
+            <img class="screenshot"src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
+            <div class="image-tooltip">
+              <p>Click to make bigly</p>
+            </div>
           </div>
         </li>
-        <li>In Partiality, refresh the mod list, then select the mods you want to patch in, and patch the game.
+        <li>
+          <h3>In Partiality, refresh the mod list, then select the mods you want to patch in, and patch the game.</h3>
           <p class="note">For simplicity, assume that ALL mods require Abraxis Toolset to be patched in.</p>
           <p class="note">Partiality only detects .dll files. If a mod only uses CSVs it will be patched in when the game starts by Abraxis Toolset as long as they are in the mods folder.</p>
           <p class="note">Don't change the names of any mod files or you will probably break something.</p>
@@ -102,8 +137,7 @@
     <div class="step-card">
       <h2 class="heading">Step 4: Fixing problems</h2>
       <ul class="step-list">
-        <li>If there's an infinite load screen: verify integrity of local files through steam. Patch the game with only Abraxis checked. Then patch the game with your mods of choice.</li>
-        <li></li>
+        <li><p>If there's an infinite load screen: verify integrity of local files through steam. Patch the game with only Abraxis checked. Then patch the game with your mods of choice.</p></li>
         <li></li>
       </ul>
     </div>
@@ -117,6 +151,7 @@
 <footer class="w-90">
   <p>Congratulations. Things should work now. Pat yourself on the back because you can follow directions.</p>
 </footer>
-<script src="js/script.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
