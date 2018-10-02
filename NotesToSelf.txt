@@ -1,5 +1,0 @@
-fix responsive header
-
-done - Keep large screen shots from expanding out of control on large device widths or make them expandable thumbnails or something.
-
-done - Responsive font-sizing.
