@@ -15,13 +15,14 @@
   </div>
 
   <header class="w-90">
-    <div id="ThisIsASword-container" class="header-image">
-      <img src="images/ThisIsASword.jpg" alt="ThisIsASword picture">
+    <div class="header-image">
+      <img src="images/NecroBHLogo.png" alt="Necropolis Logo">
     </div>
     <h1 class="big-heading">The Necropolis Mod Guide for the Unwashed and Ill-informed
-    <span>Instructions Courtesy of ThisIsASword</span></h1>
-    <div id="necro-logo-conainer" class="header-image">
-      <img src="images/NecroBHLogo.png" alt="Necropolis Logo">
+      <span>Instructions Courtesy of ThisIsASword</span>
+    </h1>
+    <div class="header-image">
+      <img src="images/ThisIsASword.jpg" alt="ThisIsASword picture">
     </div>
   </header>
 
@@ -107,7 +108,7 @@
               <p>Click to make bigly</p>
             </div>
           </div>
-          <p class="">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
+          <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
         </li>
         <li><h3>Extract the .zip or .rar file anywhere you want.</h3>
           <p class="note">(Preferably somewhere you can find it later)</p>
@@ -120,6 +121,7 @@
         </li>
         <li><h3>Place folders containing the CSV files into <code>Necropolis/Mods</code></h3>
           <p class="note">Unless the mod's instructions specify otherwise.</p>
+          <p class="note attention">Note: Partiality will only detect <code>.dll</code> files. It does not detect mods that only use CSVs. CSVs are patched in by Abraxis Toolset automatically if Abraxis is applied with Partiality and the CSV folders are in the <code>Mods</code> folder.</p>
         </li>
         <li><h3>Place .dlls into <code>Necropolis/Mods</code></h3>
           <p class="note">Unless the mod's instructions specify otherwise.</p>
@@ -144,9 +146,24 @@
     <div class="step-card">
       <h2 class="heading">Step 4: Fixing problems</h2>
       <ul class="step-list">
-        <li><p>If there's an infinite load screen: verify integrity of local files through steam. Patch the game with only Abraxis checked. Then patch the game with your mods of choice.</p></li>
-        <li></li>
+        <li><p>If there's an infinite load screen:</p>
+          <ol class="note">
+            <li><p>Verify integrity of local files through steam.</p></li>
+            <li><p>Patch the game with only Abraxis checked.</p></li>
+            <li><p>Then patch the game with your mods of choice.</p></li>
+          </ol>
+        </li>
+        <li>If you experience strange problems specifically in multiplayer, make sure everyone in the session has the same mods installed and are using the latest versions.</li>
       </ul>
+    </div>
+
+    <div class="step-card">
+      <h2 class="heading">Step 5: Reverting to Vanilla</h2>
+      <ol class="step-list">
+        <li><p>Open Partiality and click "Clear Mod Metadata"</p></li>
+        <li><p>Click "Apply Mods"</p></li>
+        <li><p>If the game won't start, verify integrity of local files with Steam</p></li>
+      </ol>
     </div>
     <!-- <div class="step-card">
     <h2>Step x</h2>
