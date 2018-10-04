@@ -18,6 +18,7 @@ body {
   padding: 0;
   background-color: @necro-grey;
   .necro-font;
+  word-wrap:break-word;
 }
 
 .w-90 {
@@ -78,7 +79,9 @@ footer {
   color: @necro-black;
   border-radius: 5px;
   padding: 0;
-  padding-bottom: 4px;
+  .step-content {
+    padding: 5px 3%;
+  }
   h3 {
     .heading-font-scale-lg;
   }
