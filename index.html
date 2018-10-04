@@ -2,7 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Necro Mod Guide</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -177,6 +179,17 @@
           <li><h3>If you experience strange problems specifically in multiplayer:</h3>
             <p>Make sure everyone in the session has the same mods installed and are using the latest versions.</p>
           </li>
+          <li><p>Alternatively, you can try swapping the data folder with the backup:</p>
+            <ol>
+              <li><p>Navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis\Necropolis_Data\StreamingAssets</code>.</p>
+                <p class="note">There should be a "<code>data</code>" folder and a "<code>BACKUP_data</code>" folder.</p>
+              </li>
+              <li><p>Delete the "<code>data</code>" folder.</p></li>
+              <li><p>Duplicate the "<code>BACKUP_data</code>" folder.</p></li>
+              <li><p>Rename the duplicated folder to "<code>data</code>".</p></li>
+              <li><p>Try starting the game again.</p></li>
+            </ol>
+          </li>
         </ul>
       </div>
     </div>
@@ -188,7 +201,6 @@
           <li><p>Open Partiality and click "Clear Mod Metadata"</p></li>
           <li><p>Click "Apply Mods"</p></li>
           <li><p>If the game won't start, verify integrity of local files with Steam</p></li>
-          <!-- <li><p>If the game won't start, verify integrity of local files with Steam</p></li> -->
         </ol>
       </div>
     </div>
