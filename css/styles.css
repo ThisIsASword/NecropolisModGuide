@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans');
+.heading-font-scale-3xl {
+  font-size: 1.92rem;
+}
+@media screen and (min-width: 900px) {
+  .heading-font-scale-3xl {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heading-font-scale-3xl {
+    font-size: 3.6rem;
+  }
+}
+.heading-font-scale-xl {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 900px) {
+  .heading-font-scale-xl {
+    font-size: 1.56rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heading-font-scale-xl {
+    font-size: 1.92rem;
+  }
+}
+.heading-font-scale-lg {
+  font-size: 0.96rem;
+}
+@media screen and (min-width: 600px) {
+  .heading-font-scale-lg {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .heading-font-scale-lg {
+    font-size: 1.56rem;
+  }
+}
+.note-font-scale {
+  font-size: 0.72rem;
+}
+@media screen and (min-width: 600px) {
+  .note-font-scale {
+    font-size: 0.96rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .note-font-scale {
+    font-size: 1.2rem;
+  }
+}
+.inactive {
+  display: none;
+}
+.bg-color {
+  background-color: #8ee3cc;
+}
+.attention {
+  color: #c41c0d;
+}
+.necro-font {
+  font-family: 'Roboto Slab', sans-serif;
+}
+.basic-font {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 3rem;
+  background-color: #282020;
+  font-family: 'Roboto Slab', sans-serif;
+  word-wrap: break-word;
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+}
+header {
+  display: flex;
+  position: relative;
+}
+header .big-heading {
+  width: 80%;
+  color: #c41c0d;
+  text-align: center;
+  font-size: 1.92rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px #140004;
+}
+@media screen and (min-width: 900px) {
+  header .big-heading {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .big-heading {
+    font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  header .big-heading {
+    width: 100%;
+    z-index: 1;
+  }
+}
+header span {
+  font-size: 0.96rem;
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  header span {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  header span {
+    font-size: 1.56rem;
+  }
+}
+.header-image {
+  margin: auto;
+  width: 20%;
+}
+@media screen and (max-width: 900px) {
+  .header-image {
+    position: absolute;
+    left: 0;
+    bottom: 00%;
+    z-index: 0;
+    filter: brightness(75%);
+    object-fit: contain;
+  }
+  .header-image:nth-of-type(2) {
+    left: 80%;
+  }
+}
+.header-image img {
+  width: 100%;
+  border-radius: 100%;
+}
+.foreword {
+  font-weight: bolder;
+  font-size: 0.72rem;
+}
+@media screen and (min-width: 600px) {
+  .foreword {
+    font-size: 0.96rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .foreword {
+    font-size: 1.2rem;
+  }
+}
+.necro-card {
+  background-color: #8ee3cc;
+  border: unset;
+}
+.necro-card code {
+  color: #282020;
+}
+.necro-card .btn {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+@media screen and (min-width: 900px) {
+  .necro-card .btn {
+    font-size: 1.56rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .necro-card .btn {
+    font-size: 1.92rem;
+  }
+}
+.necro-card h2 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+@media screen and (min-width: 900px) {
+  .necro-card h2 {
+    font-size: 1.56rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .necro-card h2 {
+    font-size: 1.92rem;
+  }
+}
+.necro-card h3 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+@media screen and (min-width: 900px) {
+  .necro-card h3 {
+    font-size: 1.56rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .necro-card h3 {
+    font-size: 1.92rem;
+  }
+}
+.necro-heading {
+  padding: .5rem 1rem;
+  background-color: #e0f7f1;
+  box-shadow: 0 2px 3px #2d6e53;
+}
+.img-wrapper {
+  position: relative;
+  width: 350px;
+  background-color: #282020;
+  border: solid #282020 3px;
+}
+@media screen and (max-width: 600px) {
+  .img-wrapper {
+    width: 80%;
+  }
+}
+.img-wrapper .image-tooltip {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(196, 28, 13, 0.9);
+  color: white;
+  font-size: 0.96rem;
+  text-align: center;
+}
+.img-wrapper .image-tooltip p {
+  margin: 0;
+}
+.img-wrapper:hover {
+  cursor: pointer;
+}
+.img-wrapper:hover .image-tooltip {
+  visibility: visible;
+}
+.necro-footer {
+  color: #c41c0d;
+  text-align: center;
+}
+.note {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72rem;
+  padding: 3px;
+  background-color: #65d9ba;
+  border-radius: 3px;
+}
+@media screen and (min-width: 600px) {
+  .note {
+    font-size: 0.96rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .note {
+    font-size: 1.2rem;
+  }
+}
+a {
+  color: #c41c0d;
+  font-weight: bold;
+}

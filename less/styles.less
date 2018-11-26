@@ -1,8 +1,6 @@
-// out: ../css/style.css, compress: true
+// out: ../css/styles.css
 
-@import "colors.less";
-@import "responsive-text.less";
-@import "lightbox.less";
+@import "variables";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans');
 
 .necro-font {
@@ -15,16 +13,17 @@
 body {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1rem 3rem;
   background-color: @necro-grey;
   .necro-font;
-  word-wrap:break-word;
+  word-wrap: break-word;
+  @media screen and (max-width: 600px) {
+    padding: 0;
+    // .px-5 .py-3
+  }
 }
 
-.w-90 {
-  width: 90%;
-  margin: auto;
-}
+
 
 header {
   display: flex;
@@ -51,6 +50,7 @@ header {
 .header-image {
   margin: auto;
   width: 20%;
+
   @media screen and (max-width: 900px) {
     position: absolute;
     left: 0;
@@ -68,45 +68,37 @@ header {
     border-radius: 100%;
   }
 }
-
-footer {
-  color: @necro-red;
-  text-align: center;
+.foreword {
+  font-weight: bolder;
+  .note-font-scale;
 }
 
-.step-card {
-  background-color: @necro-blue;
-  color: @necro-black;
-  border-radius: 5px;
-  padding: 0;
-  .step-content {
-    padding: 5px 3%;
+.necro-card {
+  .bg-color;
+  border: unset;
+
+  code {
+    color: @necro-grey;
+  }
+  .btn {
+    .heading-font-scale-xl;
+    font-weight: bolder;
+  }
+  h2 {
+    .heading-font-scale-xl;
+    font-weight: bolder;
   }
   h3 {
-    .heading-font-scale-lg;
-  }
-  p {
-    .heading-font-scale-lg;
-  }
-}
-.welcome {
-  .foreword {
-    padding: 0 3% 5px 3%;
+    .heading-font-scale-xl;
+    font-weight: bolder;
   }
 }
 
-.heading {
-  .heading-font-scale-lg;
-  background-color: lighten(@necro-blue, 20%);
-  box-shadow: 0px 2px 3px #2d6e53;
-  padding: 5px;
-  border-radius: 5px 5px 0 0;
-}
+.necro-heading {
+  padding: .5rem 1rem;
+  background-color: @necro-light-blue;
+  box-shadow: 0 2px 3px #2d6e53;
 
-.step-list {
-  li {
-    margin-bottom: 5px;
-  }
 }
 
 .img-wrapper {
@@ -139,11 +131,11 @@ footer {
       visibility: visible;
     }
   }
-  img {
-    width: 100%;
-    display: block;
-    margin: auto;
-  }
+}
+
+.necro-footer {
+  color: @necro-red;
+  text-align: center;
 }
 
 .note {
@@ -158,8 +150,4 @@ footer {
 a {
   color: @necro-red;
   font-weight: bold;
-}
-
-.attention {
-  color: @necro-red;
 }

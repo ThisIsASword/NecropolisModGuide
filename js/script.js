@@ -1,19 +1,15 @@
-// Add event listeners to images that make them go all lightbox fullscreen and such
-var imagePopUps = document.querySelectorAll(".img-wrapper");
-var lightbox = document.querySelector("#modal-lightbox");
-var lightboxImage = document.querySelector("#lightbox-image");
+(function(){
+  // Lightbox modal
+  var lightbox = document.querySelector("#modal-lightbox");
+  // Image thumbnails to expand in the lightbox
+  var images = document.querySelectorAll(".image-thumb");
 
-for(var i =  0; i < imagePopUps.length; i++) {
-  imagePopUps[i].addEventListener("click", function(event) {
-    event.preventDefault();
-    // this.style.display = "none";
-    var src = this.querySelector(".screenshot").getAttribute("src");
-    lightboxImage.src = src;
-    lightbox.style.display = "block";
-  });
-}
-
-lightbox.querySelector(".close-button").addEventListener("click", function(event) {
-  event.preventDefault();
-  lightbox.style.display = "none";
-});
+  // Assign click handler to each image with .image-thumb class
+  for(var i =  0; i < images.length; i++) {
+    images[i].addEventListener("click", function(event) {
+      // Copy src and alt attributes of event target to lightbox
+      lightbox.querySelector("#lightbox-image").src = this.getAttribute("src");
+      lightbox.querySelector("#lightbox-image").alt = this.getAttribute("alt");
+    });
+  }
+})();

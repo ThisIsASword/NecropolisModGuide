@@ -1,216 +1,258 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" lang="en">
   <title>The Necro Mod Guide</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="">
 
-  <div id="modal-lightbox">
-    <div class="close-button">Close</div>
-    <div class="img-container">
-      <img id="lightbox-image" src="" alt="">
-    </div>
-  </div>
-
-  <header class="w-90">
-    <div class="header-image">
-      <img src="images/NecroBHLogo.png" alt="Necropolis Logo">
-    </div>
-    <h1 class="big-heading">The Necropolis Mod Guide for the Unwashed and Ill-informed
-      <span>Instructions Courtesy of ThisIsASword</span>
-    </h1>
-    <div class="header-image">
-      <img src="images/ThisIsASword.jpg" alt="ThisIsASword picture">
-    </div>
-  </header>
-
-  <section class="w-90">
-    <div class="step-card welcome">
-      <h2 class="heading">Welcome</h2>
-      <div class="step-content">
-        <div class="foreword">
-          <h3>Use this guide to install/uninstall mods for Necropolis.</h3>
-          <h3>Give it a serious, honest effort before asking modders how to install or fix things.</h3>
+  <!-- Modal -->
+  <div id="modal-lightbox" class="modal fade m-4" tabindex="-1" role="dialog" aria-labelledby="modalLightboxLabel" aria-hidden="true">
+    <div class="modal-dialog mw-100" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="img-container">
+            <img id="lightbox-image" class="img-fluid" src="" alt="">
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="w-90">
-    <div class="step-card">
-      <h2 class="heading">Step 1: Install Partiality</h2>
-      <div class="step-content">
-        <p class="note">Steps by <a href="https://github.com/ZandrXandr?tab=repositories">Zandra</a> with some minor modifications.</p>
-        <ol class="step-list">
-          <li><h3>Download <a href="https://github.com/PartialityModding/PartialityLauncher/releases">Partiality</a></h3>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/PartialityReleases.png" alt="Screenshot of Partiality Releases Page">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-            <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
-          </li>
-          <li><h3>Extract the .zip file anywhere you want.</h3></li>
-          <li><h3>Run "Partiality Launcher.bat".</h3></li>
-          <li><h3>Press "File" at the top, then "Open Game".</h3>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/PartialityInterface.png" alt="Screenshot of Partiality Interface">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-          </li>
-          <li><h3>Find your game's <code>.exe</code> and select it.</h3>
-            <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
-            <p class="note">Mac: ???</p>
-            <p class="note">Linux: ??????</p>
-            <p class="note">Toaster: I hope so.</p>
-          </li>
-          <li><h3>Type Necropolis' App ID, <code>384490</code>, in the text field.</h3></li>
-          <li><h3>Once you have it selected, press "Apply Mods" at the bottom.</h3></li>
-          <li><h3>It will patch the game and create folders for you.</h3></li>
-          <li><h3>Place the <code>appid.txt</code> file in the <code>Necropolis</code> folder.</h3>
-            <p>Click <a href="appid.txt" download>HERE</a> to download that file.</p>
-          </li>
-        </ol>
+
+  <div class="container-fluid">
+    <!-- Needlessly elaborate header -->
+    <header class="mb-4">
+      <div class="header-image">
+        <img src="images/NecroBHLogo.png" alt="Necropolis Logo">
       </div>
-    </div>
-
-    <div class="step-card">
-      <h2 class="heading">Step 2: Install Abraxis Toolset</h2>
-      <div class="step-content">
-        <ol class="step-list">
-          <li><h3>Download <a href="https://github.com/Cut2TheChase/AbraxisToolset/releases">Abraxis Toolset</a></h3>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/AbraxisReleases.png" alt="Screenshot of Abraxis Toolset Releases Page">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-          </li>
-          <li><h3>Extract the .rar file anywhere you want.</h3>
-            <p class="note">(Look at that README.txt file existing, literally insisting that you read it. It will tell you to...)</p>
-          </li>
-          <li><h3>Locate the game's folder.</h3>
-            <p class="note">Windows: usually <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis</code></p>
-            <p class="note">Mac: <code>???</code></p>
-            <p class="note">Linux: <code>??????</code></p>
-            <p class="note">Refrigerator: <code>Running?</code></p>
-          </li>
-          <li><h3>Place Abraxis Toolset files in necessary locations.</h3>
-            <p>Place AbraxisToolset.dll into <code>Necropolis/Mods</code></p>
-            <p>Place discord-rpc.dll into <code>Necropolis/Plugins</code></p>
-          </li>
-          <li><h3>In Partiality, click refresh, then click the Abraxis Toolset checkbox, then click "Apply Mods".</h3></li>
-        </ol>
+      <h1 class="big-heading">The Necropolis Mod Guide for the Unwashed and Ill-informed
+        <span>Instructions Courtesy of ThisIsASword</span>
+      </h1>
+      <div class="header-image">
+        <img src="images/ThisIsASword.jpg" alt="ThisIsASword picture">
       </div>
-    </div>
+    </header>
 
-    <div class="step-card">
-      <h2 class="heading">Step 3: Adding Mods</h2>
-      <div class="step-content">
-        <ol class="step-list">
-          <li><h3>Download the mods you want to install.</h3>
-            <p>Several mods can be found on <a href="https://www.nexusmods.com/necropolis">NexusMods</a></p>
-            <p>Mods that aren't yet on NexusMods can often be found on the <a href="https://discord.gg/vxGwTr6">Discord Server</a>.</p>
-            <p>
-              For this example, we'll use <a href="https://github.com/Cut2TheChase/ZekesNewThrowables/releases">Zeke's New Throwables</a>.
-              It's sourced from GitHub but the steps are the same after downloading the .zip or .rar file.
-            </p>
-            <p class="note">Downloads should be from the mod's "releases" page if they're from Github otherwise you're probably getting the wrong files.</p>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/ZNTReleases.png" alt="Zeke's New Throwables Releases Page Screenshot">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-            <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
-          </li>
-          <li><h3>Extract the .zip or .rar file anywhere you want.</h3>
-            <p class="note">(Preferably somewhere you can find it later)</p>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-          </li>
-          <li><h3>Place folders containing the CSV files into <code>Necropolis/Mods</code></h3>
-            <p class="note">Unless the mod's instructions specify otherwise.</p>
-            <p class="note attention">Note: Partiality will only detect <code>.dll</code> files. It does not detect mods that only use CSVs. CSVs are patched in by Abraxis Toolset automatically if Abraxis is applied with Partiality and the CSV folders are in the <code>Mods</code> folder.</p>
-          </li>
-          <li><h3>Place .dlls into <code>Necropolis/Mods</code></h3>
-            <p class="note">Unless the mod's instructions specify otherwise.</p>
-          </li>
-          <li><h3>At the end of this process, your mods folder should look something like this:</h3>
-            <div class="img-wrapper">
-              <img class="screenshot"src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
-              <div class="image-tooltip">
-                <p>Click to make bigly</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <h3>In Partiality, refresh the mod list, then select the mods you want to patch in, and patch the game.</h3>
-            <p class="note">For simplicity, assume that ALL mods require Abraxis Toolset to be patched in.</p>
-            <p class="note">Partiality only detects .dll files. If a mod only uses CSVs it will be patched in when the game starts by Abraxis Toolset as long as they are in the mods folder.</p>
-            <p class="note">Don't change the names of any mod files or you will probably break something.</p>
-          </li>
-        </ol>
+    <!-- Welcome / foreword section -->
+    <section class="card mb-2 necro-card">
+      <div class="card-header necro-heading" id="headingOne">
+        <h2 class="mb-0">
+          Welcome
+        </h2>
       </div>
-    </div>
+      <div class="card-body">
+        <div class="foreword">
+          <p>Use this guide to install/uninstall mods for Necropolis.</p>
+          <p>Give it a serious, honest effort before asking modders how to install or fix things.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="step-card">
-      <h2 class="heading">Step 4: Fixing problems</h2>
-      <div class="step-content">
-        <ul class="step-list">
-          <li><h3>If there's an infinite load screen:</h3>
-            <ol>
-              <li><p>Verify integrity of local files through steam.</p></li>
-              <li><p>Patch the game with only Abraxis checked.</p></li>
-              <li><p>Then patch the game with your mods of choice.</p></li>
-            </ol>
-          </li>
-          <li><h3>If you experience strange problems specifically in multiplayer:</h3>
-            <p>Make sure everyone in the session has the same mods installed and are using the latest versions.</p>
-          </li>
-          <li><p>Alternatively, you can try swapping the data folder with the backup:</p>
-            <ol>
-              <li><p>Navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis\Necropolis_Data\StreamingAssets</code>.</p>
-                <p class="note">There should be a "<code>data</code>" folder and a "<code>BACKUP_data</code>" folder.</p>
+    <section>
+      <!-- STEP ONE  -->
+      <div class="card mb-2 necro-card">
+        <div class="card-header necro-heading" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Step 1: Install Partiality
+            </button>
+          </h2>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+          <div class="card-body">
+            <p class="card-text note">Steps by <a href="https://github.com/ZandrXandr?tab=repositories">Zandra</a> with some minor modifications.</p>
+            <ol class="">
+              <li class=""><h3>Download <a href="https://github.com/PartialityModding/PartialityLauncher/releases">Partiality</a></h3>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid" src="images/PartialityReleases.png" alt="Screenshot of Partiality Releases Page">
+                </div>
+                <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
               </li>
-              <li><p>Delete the "<code>data</code>" folder.</p></li>
-              <li><p>Duplicate the "<code>BACKUP_data</code>" folder.</p></li>
-              <li><p>Rename the duplicated folder to "<code>data</code>".</p></li>
-              <li><p>Try starting the game again.</p></li>
+              <li class=""><h3>Extract the .zip file anywhere you want.</h3></li>
+              <li class=""><h3>Run "Partiality Launcher.bat".</h3></li>
+              <li class=""><h3>Press "File" at the top, then "Open Game".</h3>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid"src="images/PartialityInterface.png" alt="Screenshot of Partiality Interface">
+                </div>
+              </li>
+              <li class=""><h3>Find your game's <code>.exe</code> and select it.</h3>
+                <p class="note">Windows: usually C:\Program Files (x86)\Steam\steamapps\common\Necropolis</p>
+                <p class="note">Mac: ???</p>
+                <p class="note">Linux: ??????</p>
+                <p class="note">Toaster: I hope so.</p>
+              </li>
+              <li class=""><h3>Type Necropolis' App ID, <code>384490</code>, in the text field.</h3></li>
+              <li class=""><h3>Once you have it selected, press "Apply Mods" at the bottom.</h3></li>
+              <li class=""><h3>It will patch the game and create folders for you.</h3></li>
+              <li class=""><h3>Place the <code>appid.txt</code> file in the <code>Necropolis</code> folder.</h3>
+                <p>Click <a href="appid.txt" download>HERE</a> to download that file.</p>
+              </li>
             </ol>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="step-card">
-      <h2 class="heading">Step 5: Reverting to Vanilla</h2>
-      <div class="step-content">
-        <ol class="step-list">
-          <li><p>Open Partiality and click "Clear Mod Metadata"</p></li>
-          <li><p>Click "Apply Mods"</p></li>
-          <li><p>If the game won't start, verify integrity of local files with Steam</p></li>
-        </ol>
+      <!-- STEP TWO  -->
+      <div class="card mb-2 necro-card">
+        <div class="card-header necro-heading" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Step 2: Install Abraxis Toolset
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse">
+          <div class="card-body">
+            <ol class="">
+              <li><h3>Download <a href="https://github.com/Cut2TheChase/AbraxisToolset/releases">Abraxis Toolset</a></h3>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid"src="images/AbraxisReleases.png" alt="Screenshot of Abraxis Toolset Releases Page">
+                </div>
+              </li>
+              <li><h3>Extract the .rar file anywhere you want.</h3>
+                <p class="note">(Look at that README.txt file existing, literally insisting that you read it. It will tell you to...)</p>
+              </li>
+              <li><h3>Locate the game's folder.</h3>
+                <p class="note">Windows: usually <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis</code></p>
+                <p class="note">Mac: <code>???</code></p>
+                <p class="note">Linux: <code>??????</code></p>
+                <p class="note">Refrigerator: <code>Running?</code></p>
+              </li>
+              <li><h3>Place Abraxis Toolset files in necessary locations.</h3>
+                <p>Place AbraxisToolset.dll into <code>Necropolis/Mods</code></p>
+                <p>Place discord-rpc.dll into <code>Necropolis/Plugins</code></p>
+              </li>
+              <li><h3>In Partiality, click refresh, then click the Abraxis Toolset checkbox, then click "Apply Mods".</h3></li>
+            </ol>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </section>
+      <!-- STEP THREE  -->
+      <div class="card mb-2 necro-card">
+        <div class="card-header necro-heading" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Step 3: Adding Mods
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse">
+          <div class="card-body">
+            <ol class="">
+              <li><h3>Download the mods you want to install.</h3>
+                <p>Several mods can be found on <a href="https://www.nexusmods.com/necropolis">NexusMods</a></p>
+                <p>Mods that aren't yet on NexusMods can often be found on the <a href="https://discord.gg/vxGwTr6">Discord Server</a>.</p>
+                <p>
+                  For this example, we'll use <a href="https://github.com/Cut2TheChase/ZekesNewThrowables/releases">Zeke's New Throwables</a>.
+                  It's sourced from GitHub but the steps are the same after downloading the .zip or .rar file.
+                </p>
+                <p class="note">Downloads should be from the mod's "releases" page if they're from Github otherwise you're probably getting the wrong files.</p>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid"src="images/ZNTReleases.png" alt="Zeke's New Throwables Releases Page Screenshot">
+                </div>
+                <p class="note">Note: Always use the latest version even if it's not what appears in the example screenshots</p>
+              </li>
+              <li><h3>Extract the .zip or .rar file anywhere you want.</h3>
+                <p class="note">(Preferably somewhere you can find it later)</p>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid"src="images/ZNTFolder.png" alt="Zeke's New Throwables Downloaded Folder">
+                </div>
+              </li>
+              <li><h3>Place folders containing the CSV files into <code>Necropolis/Mods</code></h3>
+                <p class="note">Unless the mod's instructions specify otherwise.</p>
+                <p class="note attention">Note: Partiality will only detect <code>.dll</code> files. It does not detect mods that only use CSVs. CSVs are patched in by Abraxis Toolset automatically if Abraxis is applied with Partiality and the CSV folders are in the <code>Mods</code> folder.</p>
+              </li>
+              <li><h3>Place .dlls into <code>Necropolis/Mods</code></h3>
+                <p class="note">Unless the mod's instructions specify otherwise.</p>
+              </li>
+              <li><h3>At the end of this process, your mods folder should look something like this:</h3>
+                <div class="img-wrapper" data-toggle="modal" data-target="#modal-lightbox">
+                  <img class="image-thumb img-fluid"src="images/NecroModsInstalled.png" alt="Mods Folder With Mods Installed">
+                </div>
+              </li>
+              <li>
+                <h3>In Partiality, refresh the mod list, then select the mods you want to patch in, and patch the game.</h3>
+                <p class="note">For simplicity, assume that ALL mods require Abraxis Toolset to be patched in.</p>
+                <p class="note">Partiality only detects .dll files. If a mod only uses CSVs it will be patched in when the game starts by Abraxis Toolset as long as they are in the mods folder.</p>
+                <p class="note">Don't change the names of any mod files or you will probably break something.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
 
-  <footer class="w-90">
-    <p>Congratulations. Things should work now. Pat yourself on the back because you can follow directions.</p>
-  </footer>
+      <!-- STEP FOUR  -->
+      <div class="card mb-2 necro-card">
+        <div class="card-header necro-heading" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Step 4: Fixing problems
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse">
+          <div class="card-body">
+            <ul class="">
+              <li><h3>If there's an infinite load screen:</h3>
+                <ol>
+                  <li><p>Verify integrity of local files through steam.</p></li>
+                  <li><p>Patch the game with only Abraxis checked.</p></li>
+                  <li><p>Then patch the game with your mods of choice.</p></li>
+                </ol>
+              </li>
+              <li><h3>If you experience strange problems specifically in multiplayer:</h3>
+                <p>Make sure everyone in the session has the same mods installed and are using the latest versions.</p>
+              </li>
+              <li><p>Alternatively, you can try swapping the data folder with the backup:</p>
+                <ol>
+                  <li><p>Navigate to <code>C:\Program Files (x86)\Steam\steamapps\common\Necropolis\Necropolis_Data\StreamingAssets</code>.</p>
+                    <p class="note">There should be a "<code>data</code>" folder and a "<code>BACKUP_data</code>" folder.</p>
+                  </li>
+                  <li><p>Delete the "<code>data</code>" folder.</p></li>
+                  <li><p>Duplicate the "<code>BACKUP_data</code>" folder.</p></li>
+                  <li><p>Rename the duplicated folder to "<code>data</code>".</p></li>
+                  <li><p>Try starting the game again.</p></li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <!-- STEP FIVE  -->
+      <div class="card mb-2 necro-card">
+        <div class="card-header necro-heading" id="headingFive">
+          <h2 class="mb-0">
+            <button class="btn " type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Step 5: Reverting to Vanilla
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFive" class="collapse">
+          <div class="card-body">
+            <ol class="">
+              <li><h3>Open Partiality and click "Clear Mod Metadata"</h3></li>
+              <li><h3>Click "Apply Mods"</h3></li>
+              <li><h3>If the game won't start, verify integrity of local files with Steam</h3></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="necro-footer">
+      <p>Congratulations. Things should work now. Pat yourself on the back because you can follow directions.</p>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

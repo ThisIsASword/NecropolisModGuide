@@ -1,7 +1,17 @@
-// main: style.less
+// main: styles.less
 
-@base-font-size: 20px;
+// Color variables
+@necro-blue:        #8ee3cc;
+@necro-light-blue:  #e0f7f1;
+@necro-red:         #c41c0d;
+@necro-light-grey:  #a9afad;
+@necro-grey:        #282020;
+@necro-black:       #140004;
 
+
+// Font scaling
+// @base-font-size: 20px;
+@base-font-size: 1.2rem;
 
 @font-size-3xl: @base-font-size * 3;
 @font-size-2xl: @base-font-size * 2;
@@ -47,4 +57,18 @@
   @media screen and (min-width: 900px) {
     font-size: @font-size-md;
   }
+}
+
+
+// Utility classes
+.inactive {
+  display: none;
+}
+
+.bg-color {
+  background-color: @necro-blue;
+}
+
+.attention {
+  color: @necro-red;
 }
